@@ -1,0 +1,51 @@
+﻿@model List<dNetApp.Models.Account>
+
+@{
+    ViewBag.Title = "Account list";
+}
+
+<h2>@ViewBag.Title</h2>
+
+  
+
+    <table>
+
+        <thead>
+        <tr>
+            <th>
+                Nazev
+            </th>
+            <th>
+                Edit account
+            </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)  
+
+                </td>
+                <td>
+                     @Html.ActionLink("Edit", "Form", new { id = item.ID })  
+                   
+                </td>
+                </tr>    
+        }
+
+            <tr>
+                <td>
+                    @Html.ActionLink("Create", "Form")
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+               

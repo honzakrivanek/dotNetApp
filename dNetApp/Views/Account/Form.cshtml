@@ -1,0 +1,50 @@
+﻿@model dNetApp.Models.Account
+
+@{
+    ViewBag.Title = "Edit account";
+}
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm())
+{
+   
+    <fieldset>
+
+        <legend>Account</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        @if (Model != null) { 
+        for(int i = 1; i < Model.Contacts.Count; i++) 
+        { 
+            @Html.HiddenFor(m => Model.Contacts[i].ID)
+            @Html.TextBoxFor(m => Model.Contacts[i].FirstName)
+            @Html.TextBoxFor(m => Model.Contacts[i].LastName)
+            @Html.TextBoxFor(m => Model.Contacts[i].Email)
+        }
+        }
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Contacts)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+
+
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back", "List")
+</div>
