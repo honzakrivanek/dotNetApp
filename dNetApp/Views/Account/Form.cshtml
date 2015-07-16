@@ -13,22 +13,39 @@
 
         <legend>Account</legend>
 
+        @Html.HiddenFor(model => Model.ID)
+
         <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelFor(model => Model.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
+            @Html.EditorFor(model => Model.Name)
         </div>
 
+
+        <div class="editor-label">
+            @Html.LabelFor(model => Model.Contacts)
+        </div>
         @if (Model != null) { 
-        for(int i = 1; i < Model.Contacts.Count; i++) 
+        for(int i = 0; i < Model.Contacts.Count; i++) 
         { 
-            @Html.HiddenFor(m => Model.Contacts[i].ID)
-            @Html.TextBoxFor(m => Model.Contacts[i].FirstName)
-            @Html.TextBoxFor(m => Model.Contacts[i].LastName)
-            @Html.TextBoxFor(m => Model.Contacts[i].Email)
+            
+            <div class="editor-field">
+            @Html.HiddenFor(model => Model.Contacts[i].ID)
+            @Html.LabelFor(model => Model.Contacts[i].FirstName)
+            @Html.TextBoxFor(model => Model.Contacts[i].FirstName)
+            @Html.LabelFor(model => Model.Contacts[i].LastName)
+            @Html.TextBoxFor(model => Model.Contacts[i].LastName)
+            @Html.LabelFor(model => Model.Contacts[i].Email)
+            @Html.TextBoxFor(model => Model.Contacts[i].Email)
+            </div>
         }
         }
+        
+        
+        
+        
+        
 
         <p>
             <input type="submit" value="Save" />

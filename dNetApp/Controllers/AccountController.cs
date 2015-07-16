@@ -34,7 +34,8 @@ namespace dNetApp.Controllers
         {
             if (id != null)
             {
-                Account account = db.Accounts.Find(id); 
+                Account account = db.Accounts.Find(id);
+                account.Contacts.Add(new Contact { });
                 return View(account);
             }
             else
@@ -43,6 +44,7 @@ namespace dNetApp.Controllers
                 return View(account);
             }
 
+            //Never happen
             return View();
         }
 
@@ -56,15 +58,34 @@ namespace dNetApp.Controllers
                 Account oldAccount = db.Accounts.Find(account.ID);
                 if(oldAccount != null)
                 {
-                    //pokus
-                    oldAccount.Contacts.Add(new Contact { FirstName = "aaaa", LastName = "dsfewf", Email = "dsff@feffe"});
 
                     oldAccount.Name = account.Name;
+
+                    
+                    for (int i = 0; i < oldAccount.Contacts.Count; i++)
+                    {
+                        oldAccount.Contacts[i].FirstName = account.Contacts[i].FirstName;
+                        oldAccount.Contacts[i].LastName = account.Contacts[i].LastName;
+                        oldAccount.Contacts[i].Email = account.Contacts[i].Email;
+                    }
+                    
+                    // TO SE DA OSETRIT LIP, JE NA TO FUNKCE!!!!
+                    if ( (oldAccount.Contacts.Count < account.Contacts.Count) &&
+                         (account.Contacts.Last().FirstName != null) &&
+                         (account.Contacts.Last().LastName != null) &&
+                         (account.Contacts.Last().Email != null)
+                       )
+                    {
+                        oldAccount.Contacts.Add(new Contact { FirstName = account.Contacts.Last().FirstName,
+                                                              LastName = account.Contacts.Last().LastName,
+                                                              Email = account.Contacts.Last().Email
+                                                            });
+                    }
+
                     db.SaveChanges();
                     return RedirectToAction("List");
                 }
-            
-            
+
                 db.Accounts.Add(account);
                 db.SaveChanges();
                 return RedirectToAction("List");
