@@ -28,3 +28,33 @@ c:\users\honza\documents\visual studio 2013\Projects\dNetApp\dNetApp\bin\EntityF
 c:\users\honza\documents\visual studio 2013\Projects\dNetApp\dNetApp\bin\EntityFramework.xml
 c:\users\honza\documents\visual studio 2013\Projects\dNetApp\dNetApp\bin\EntityFramework.SqlServer.xml
 c:\users\honza\documents\visual studio 2013\Projects\dNetApp\dNetApp\obj\Debug\dNetApp.csprojResolveAssemblyReference.cache
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\dNetApp.dll.config
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\dNetApp.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\dNetApp.pdb
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\Antlr3.Runtime.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\EntityFramework.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\EntityFramework.SqlServer.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\Newtonsoft.Json.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Helpers.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Mvc.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Optimization.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Razor.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\WebGrease.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\EntityFramework.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\EntityFramework.SqlServer.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Helpers.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Mvc.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Optimization.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.Razor.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\Newtonsoft.Json.xml
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\bin\Antlr3.Runtime.pdb
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\obj\Debug\dNetApp.csprojResolveAssemblyReference.cache
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\obj\Debug\dNetApp.dll
+C:\Users\Honza\Documents\GitHub\dotNetApp\dNetApp\obj\Debug\dNetApp.pdb

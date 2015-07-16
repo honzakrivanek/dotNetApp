@@ -3,20 +3,21 @@
 @{
     ViewBag.Title = "Account list";
 }
-
 <h2>@ViewBag.Title</h2>
 
-  
-
-    <table>
+    <hr />
+    <table class= "table-striped list" >
 
         <thead>
         <tr>
             <th>
-                Nazev
+                Name
             </th>
             <th>
                 Edit account
+            </th>
+            <th>
+                Delete account
             </th>
         </tr>
         </thead>
@@ -25,23 +26,31 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
+                <td class= "nameTd">
                     @Html.DisplayFor(modelItem => item.Name)  
-
                 </td>
-                <td>
-                     @Html.ActionLink("Edit", "Form", new { id = item.ID })  
-                   
+                <td class="editTd">
+                    <div class="editBtn">
+                        @Html.ActionLink("Edit", "Form", new { id = item.ID })
+                    </div>                  
+                </td>
+                <td class="deleteTd">
+                    <div class="dangerBtn">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    </div>
+
                 </td>
                 </tr>    
         }
 
             <tr>
-                <td>
-                    @Html.ActionLink("Create", "Form")
+                <td class="nameTd">
+                    <div class="okBtn">
+                        @Html.ActionLink("Create new", "Form")
+                    </div>
                 </td>
-                <td>
-                </td>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
 

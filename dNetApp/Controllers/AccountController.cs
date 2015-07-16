@@ -49,9 +49,11 @@ namespace dNetApp.Controllers
         }
 
         // POST Account/Form/{id}
+        
         [HttpPost]
         public ActionResult Form(Account account)
         {
+
             if (ModelState.IsValid)
             {
 
@@ -69,12 +71,8 @@ namespace dNetApp.Controllers
                         oldAccount.Contacts[i].Email = account.Contacts[i].Email;
                     }
                     
-                    // TO SE DA OSETRIT LIP, JE NA TO FUNKCE!!!!
-                    if ( (oldAccount.Contacts.Count < account.Contacts.Count) &&
-                         (account.Contacts.Last().FirstName != null) &&
-                         (account.Contacts.Last().LastName != null) &&
-                         (account.Contacts.Last().Email != null)
-                       )
+                    if ( (oldAccount.Contacts.Count < account.Contacts.Count) )
+                        // && LASTNAME != NULL
                     {
                         oldAccount.Contacts.Add(new Contact { FirstName = account.Contacts.Last().FirstName,
                                                               LastName = account.Contacts.Last().LastName,
@@ -90,8 +88,25 @@ namespace dNetApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("List");
             }
-
+           
             return View(account);
         }
-    }
+
+
+        public ActionResult Delete(int id)
+        {
+            Account account = db.Accounts.Find(id);
+            if (account == null) return RedirectToAction("List");
+
+            for (var i = account.Contacts.Count; i > 0; i--)
+            {
+                db.Contacts.Remove(account.Contacts[i-1]);
+            }
+            account.Contacts.Clear();
+            db.Accounts.Remove(account);
+            db.SaveChanges();
+            return RedirectToAction("List");
+        }
+
+    }  
 }
